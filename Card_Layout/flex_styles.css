@@ -1,0 +1,102 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Apply to all elements */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* COLORS and FONTS */
+body {
+    color: rgb(22, 21, 21);
+    text-align: center;
+}
+article {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+}
+header {
+    height: 100px;
+    background: #e1f7f7;
+    font-size: 150%;
+}
+main {
+    background: #bed1d1;
+    text-align: left;
+}
+footer {
+    background: #e1f7f7;
+}
+.right-sidebar {
+    background: #83a3a3;
+    color: gainsboro;
+}
+
+/* The links can be represented as a restyled list */
+.holygrail-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+/* any anchor blocks */
+.holygrail-menu a {
+    display: block;
+    padding: 0.4em 0;
+    color: inherit;
+    text-decoration: none;
+    }
+/* on focus or hover */
+.holygrail-menu a:hover,.holygrail-menu a:focus {
+    padding: 0.4em 1em;
+    background: hsl(0, 0%, 20%);
+    color: white;
+    }
+
+    .footer-area {
+        width: 100%;
+        background-color: #e1f7f7;
+    }
+
+    
+/* full screen type layout */
+@media all and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;    
+    }
+    header,
+    footer {
+        width: 100%;
+    }
+    main {
+        flex: 2;
+        order: 2;
+        /* vh is viewport height, a screen unit */
+        min-height: 80vh;
+        padding: 5px;
+    }
+   
+    .right-sidebar {
+        flex: 1;
+        order: 3;
+    }
+    footer {
+        order: 4;
+    }
+}
+@media all and (max-width: 700px) {
+    .holygrail-menu{
+        width: 100%;
+        z-index: 1;
+    }
+    img{
+        width: 100%;
+        display: block;
+    }
+}
